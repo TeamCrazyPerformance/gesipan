@@ -1,27 +1,31 @@
 package org.tcp.gesipan.controller;
 
-import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.MediaType;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.tcp.gesipan.domain.Account;
+import org.tcp.gesipan.service.AccountService;
 
 @Slf4j
 @Controller
 public class LoginController {
 
-  @GetMapping("/login")
-  public String getLogin() {
-    return "login.html";
-  }
+    @Autowired
+    private AccountService accountService;
 
-  @RequestMapping(value="/login", method= RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-  public String getValidation(Account account) {
-    log.info(account.getEmail());
-    return "login.html";
-  }
+    @GetMapping("/login")
+    public String getLogin() {
+        return "login.html";
+    }
+
+    @PostMapping("/login")
+    public String getValidation(Account account) {
+        if (accountService.checkLogin(account)) {
+            log.info("aaaa");
+            return "main.html";
+        } else {
+            return "redirect:login";
+        }
+    }
 }
