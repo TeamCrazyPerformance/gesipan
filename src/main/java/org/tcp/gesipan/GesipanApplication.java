@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.tcp.gesipan.mapper.AccountMapper;
 
 @SpringBootApplication
-@MapperScan("org.tcp.gesipan.mapper")
+@MapperScan("org.tcp.gesipan")
 public class GesipanApplication {
   @Autowired
   AccountMapper accountMapper;

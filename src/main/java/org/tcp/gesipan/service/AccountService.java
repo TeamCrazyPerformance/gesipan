@@ -1,22 +1,27 @@
 package org.tcp.gesipan.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.tcp.gesipan.domain.Account;
+import org.tcp.gesipan.mapper.AccountMapper;
 import org.tcp.gesipan.repository.AccountRepository;
 
+@Slf4j
 @Service
 public class AccountService {
 
     @Autowired
-    private AccountRepository accountRepository;
+    private AccountMapper accountMapper;
 
     public Boolean checkLogin(Account account) {
-        String testPass = "1234";
-        Account testAccount = accountRepository.getAccount(account.getEmail());
-        if (account.getPassword().equals(testAccount.getPassword()))
+        log.info("entered checkLogin method : " + account.toString());
+        String testPassword = accountMapper.getValidation(account.getEmail());
+        log.info(testPassword);
+        if (account.getPassword().equals(testPassword)) {
             return true;
-        else
+        } else {
             return false;
+        }
     }
 }

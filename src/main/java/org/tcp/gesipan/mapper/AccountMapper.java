@@ -5,5 +5,5 @@ import org.tcp.gesipan.domain.Account;
 
 @Mapper
 public interface AccountMapper {
-    Account getAccount(String email);
+    String getValidation(String email);
 }

@@ -20,12 +20,13 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public String getValidation(Account account) {
+    public String getLogin(Account account) {
         if (accountService.checkLogin(account)) {
-            log.info("aaaa");
-            return "main.html";
+            log.info("check success");
+            return "index.html";
         } else {
-            return "redirect:login";
+            log.info("check failed");
+            return "index.html";
         }
     }
 }
