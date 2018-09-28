@@ -1,0 +1,75 @@
+body {
+    margin: 0px;
+}
+.wrapper {
+    height: 100%;
+}
+.wrapper #header {
+    background-color: aqua;
+    height: 350px;
+}
+
+.wrapper #top {
+    background-color: blue;
+    height: 367px;
+    margin-top: 30px;
+    margin-right: 0px;
+    width: 100%;
+}
+
+.wrapper #middle {
+    background-color: blueviolet;
+    height: 530px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.wrapper #bottom {
+    background-color: brown;
+    height: 200px;
+}
+
+#topimage {
+    width: 654.66px;
+    height: 352px;
+    padding-left: 12px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    float: left;
+}
+.u-height350 {
+    height: 350px;
+}
+.u-width100pct {
+    width: 100%;
+}
+
+.toparticle {
+    width: 320.328px;
+    height: 215px;
+    padding-bottom: 25px;
+    padding-left: 9px;
+    padding-right: 12px;
+    margin-bottom: 30px;
+    position: relative;
+    float: left;
+}
+
+.toptitle {
+    font-size: 32px;
+    font-weight: 600;
+    float: left;
+}
+
+.card {
+    width: 488px;
+    height: 448px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 15px;
+}
+.card-img-top {
+    width: 100%;
+    height: 274px;
+}
