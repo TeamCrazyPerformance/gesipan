@@ -1,14 +1,65 @@
 body {
     margin: 0px;
 }
+a:visited {
+    text-decoration: none;
+    color: #C8C3C3;
+}
 .wrapper {
     height: 100%;
 }
 .wrapper #header {
-    background-color: aqua;
+    background-color: black;
     height: 350px;
 }
+#header .metabar {
+    width: 100%;
+    height: 65px;
+    background: blueviolet;
+}
+#header .metabar .metabar-middle {
+    width: 1040px;
+    height: 65px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 22.4px;
+}
+#header .btn-set {
+    width: 165px;
+    height: 65px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+#header .sign-in-btn {
+    width: 43px;
+    height: 22px;
+    margin-right: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#header .sign-in {
+    font-size: 14px;
+    font-family: Helvetica;
+}
+#header .sign-up-btn {
+    width: 104px;
+    height: 35px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-color: #C8C3C3;
+    float: right;
+    border: 1px solid;
+    align-items: center;
+}
+#header .sign-up {
+    font-size: 13px;
+    font-family: Helvetica;
+}
 .wrapper #top {
     height: 367px;
     margin-top: 30px;
@@ -25,8 +76,9 @@ body {
 }
 
 .wrapper #bottom {
+    width: 100%;
     background-color: brown;
-    height: 200px;
+    align-content: center;
 }
 
 .u-height350 {
@@ -76,20 +128,48 @@ body {
     color: rgba(0, 0, 0, 0.54);
 }
 
-.div-card {
+#middle .card-deck {
+    margin: 0 auto;
+    width: 1000px;
+}
+#middle .div-card {
     width: 50%;
     float:left;
     min-width: 500px;
 }
 
-.card {
+#middle .card {
     width: 488px;
     height: 448px;
     padding-left: 12px;
     padding-right: 12px;
     margin-bottom: 15px;
 }
-.card-img-top {
+#middle .card-img-top {
     width: 100%;
     height: 274px;
+}
+
+#bottom .card-deck {
+    margin:0 auto;
+    width: 1000px;
+    height: 487px;
+}
+
+#bottom .card-deck .div-card {
+    width: 33.3%;
+    float: left;
+}
+
+#bottom .card-deck .div-card .card {
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 15px;
+}
+
+#bottom .card-img-top {
+    width: 315px;
+    height: 172px;
+    border: 1px solid rgba(0,0,0, .15);
 }
